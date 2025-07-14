@@ -1,13 +1,7 @@
 FROM pytorch/pytorch:2.7.1-cuda12.6-cudnn9-devel
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y \
-    iptables \
-    bash \
-    curl \
-    wget \
-    python3.9 \
-    git \
+    apt-get install --no-install-recommends -y iptables bash curl python3.9 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
