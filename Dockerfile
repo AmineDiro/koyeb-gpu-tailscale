@@ -6,11 +6,7 @@ RUN apt-get update && \
     bash \
     curl \
     wget \
-    python3 \
-    python3-dev \
-    python3-pip \
-    python3-setuptools \
-    openssh-client \
+    python3.9 \
     git \
     ca-certificates \
     sudo \
@@ -18,7 +14,6 @@ RUN apt-get update && \
     gnupg \
     software-properties-common \
     apt-transport-https \
-    lsb-release && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
