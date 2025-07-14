@@ -8,12 +8,6 @@ RUN apt-get update && \
     wget \
     python3.9 \
     git \
-    ca-certificates \
-    sudo \
-    rsync \
-    gnupg \
-    software-properties-common \
-    apt-transport-https \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
