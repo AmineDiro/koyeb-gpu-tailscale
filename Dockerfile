@@ -6,10 +6,10 @@ RUN apt-get update && \
     bash \
     curl \
     wget \
-    python3.9 \
-    python3.9-dev \
-    python3.9-distutils \
+    python3 \
+    python3-dev \
     python3-pip \
+    python3-setuptools \
     openssh-client \
     git \
     ca-certificates \
@@ -20,12 +20,7 @@ RUN apt-get update && \
     apt-transport-https \
     lsb-release && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    # Create python3 symlink for Ansible compatibility \
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1 && \
-    update-alternatives --set python3 /usr/bin/python3.9 && \
-    # Upgrade pip \
-    python3.9 -m pip install --upgrade pip
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
